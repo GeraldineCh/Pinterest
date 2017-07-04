@@ -1,16 +1,18 @@
 //Leerá gulp para reconocer las tareas y ponerlas en el pipe
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync').create();
-
+var rename = require('gulp-rename');
 var config = {
 	source:'./src/',
-	dist: './public'
+	dist: './public/'
 };
 
 var paths = {
 	assets: "assets/",
 	html: "**/*.html",
+	js: "js",
 	sass: "scss/**/*.scss",
 	mainSass: "scss/main.scss",
 	mainJS: "js/app.js"
