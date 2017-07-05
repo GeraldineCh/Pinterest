@@ -3,7 +3,7 @@
 
 function render(root) {
 	root.empty();
-	console.log("Entro al render");
+	console.log("Entro al RendeASDASDSAD");
 	const wrapper = $('<div class="wrapper"></div>');
   wrapper.append(detailModal( _ => { render(root); }));
 	root.append(wrapper);
