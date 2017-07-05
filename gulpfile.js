@@ -17,6 +17,7 @@ var paths = {
 	mainSass: "scss/main.scss",
 	js: "js",
 	vendor:"js/vendor/*",
+    components:"js/components/*",
 	mainJS: "js/app.js",
 	img: "img/*.png",
 	bootstrapJS: "js/vendor/bootstrap/*"
@@ -31,12 +32,18 @@ var sources = {
 	rootJS: config.source + paths.assets + paths.mainJS,
 	img: config.source + paths.assets + paths.img,
 	vendor: config.source + paths.assets + paths.vendor,
+    components: config.source + paths.assets + paths.components,
 	bootstrap: config.source + paths.assets + paths.bootstrapJS
 };
 
 
 gulp.task('vendor',function () {
 	gulp.src(sources.vendor).pipe(gulp.dest(config.dist + paths.assets + "js/vendor"))
+
+});
+
+gulp.task('components',function () {
+	gulp.src(sources.components).pipe(gulp.dest(config.dist + paths.assets + "js/components"))
 
 });
 
@@ -103,4 +110,4 @@ gulp.task("serve", function () {
 
 
 
-gulp.task('run', ['serve', 'html-watch', 'js-watch', 'sass-watch', 'vendor', 'img', 'vendor','bootstrapJS']);
+gulp.task('run', ['serve', 'html-watch', 'js-watch', 'sass-watch', 'vendor', 'components', 'img', 'vendor','bootstrapJS']);
