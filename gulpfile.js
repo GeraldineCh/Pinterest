@@ -16,7 +16,10 @@ var paths = {
 	sass: "scss/**/*.scss",
 	mainSass: "scss/main.scss",
 	js: "js",
+	fonts:"fonts",
+	bootstrapFT:"fonts/bootstrap/*",
 	vendor:"js/vendor/*",
+	components:"js/components/*",
 	mainJS: "js/app.js",
 	img: "img/*.png",
 	bootstrapJS: "js/vendor/bootstrap/*"
@@ -27,16 +30,23 @@ var sources = {
 	html: config.source + paths.html,
 	sass: paths.assets + paths.sass,
 	js: config.source + paths.js,
+	fonts:config.source + paths.fonts,
+	bootstrapFT: config.source + paths.assets + paths.bootstrapFT,
 	rootSass: config.source + paths.assets + paths.mainSass,
 	rootJS: config.source + paths.assets + paths.mainJS,
 	img: config.source + paths.assets + paths.img,
 	vendor: config.source + paths.assets + paths.vendor,
+	components: config.source + paths.assets + paths.components,
 	bootstrap: config.source + paths.assets + paths.bootstrapJS
 };
 
 
 gulp.task('vendor',function () {
 	gulp.src(sources.vendor).pipe(gulp.dest(config.dist + paths.assets + "js/vendor"))
+
+});
+gulp.task('components',function () {
+	gulp.src(sources.components).pipe(gulp.dest(config.dist + paths.assets + "js/components"))
 
 });
 
@@ -50,6 +60,14 @@ gulp.task('img',function () {
 
 });
 
+gulp.task('fonts',function () {
+	gulp.src(sources.fonts).pipe(gulp.dest(config.dist + paths.assets + "fonts"))
+
+});
+gulp.task('bootstrapFT',function () {
+	gulp.src(sources.bootstrapFT).pipe(gulp.dest(config.dist + paths.assets + "fonts/bootstrap"))
+
+});
 
 
 gulp.task('html', function () {
@@ -103,4 +121,4 @@ gulp.task("serve", function () {
 
 
 
-gulp.task('run', ['serve', 'html-watch', 'js-watch', 'sass-watch', 'vendor', 'img', 'vendor','bootstrapJS']);
+gulp.task('run', ['serve', 'html-watch', 'js-watch', 'sass-watch', 'fonts','bootstrapFT','vendor', 'img', 'components','bootstrapJS']);
