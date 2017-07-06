@@ -2,14 +2,14 @@
 
 const Header = (update) => {
     const header = $('<header></header>');
-    const title = $('<nav class="navbar navbar-default"></nav>');
+    const title = $('<form class="form-inline"></form>');
     const title2 = $('<div class="container-fluid"></div>');
     const title3 = $('<div class="form-inline"></div>');
-    const title4 = $('<div class="navbar-header"></div>');
+    const title4 = $('<div class="form-group"></div>');
  const logo = $('<img src="assets/img/pinterest-logo.png" href="#" class="img-header" alt="">');
- const search = $('<input type="text" class="form-control searcher col-md-4" placeholder="Search">');
+ const search = $('<input type="text" class="form-control searcher col-md-4" placeholder="Buscar">');
  const user = $('<img src="assets/img/icon-profile.png" class="img-header" alt="">');
- const menu = $('<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>');
+ const menu = $('<img src="assets/img/menu.png" class="hmenu" alt="">');
  const message = $('<img src="assets/img/message.png" class="img-header" alt="">');
     
  title4.append(logo);
@@ -25,6 +25,4 @@ const Header = (update) => {
     return header;
 }
 
-  
-
-
+ 

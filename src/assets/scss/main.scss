@@ -3,10 +3,17 @@
  .img-header {
   height: 20px;
   width: 20px;
+  margin: 0.5rem;
 }
 
 .searcher {
  background-color: lightgray;
  height: 20px !important;
  width: 80% !important;
+ display: inline !important;
+}
+
+.hmenu {
+ height: 15px;
+ width: 15px;
 }
