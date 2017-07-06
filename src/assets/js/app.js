@@ -3,6 +3,7 @@
 const render = (root) => {
 	root.empty();
 	const wrapper = $('<div class="wrapper"></div>');
+	console.log("Heroku te invoco");
   const button   =$('<button type="button"  name="button" data-toggle="modal" data-target="#myModal">Modal</button>');
     wrapper.append(Header());
     wrapper.append(Down());
