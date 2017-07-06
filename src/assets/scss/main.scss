@@ -1,8 +1,50 @@
 @import "bootstrap" ;
-.fondo{
-  background-color: #EEEEEE;
-  height: 100vh;
+a {
+  color: rgb(85, 85, 85) !important;
 }
-.btn_save{
+a:hover, a:focus {
+  color: rgb(85, 85, 85) !important;
+  text-decoration: underline !important;
+}
+.root , .wrapper, .fondo{
+  margin: 0;
+  padding: 0;
+}
+.coment_1{
+  padding: 2%;
+}
+.flex{
+    display: flex;
+}
+.items-center {
+    align-items: center;
+}
+.justify-between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+.flex_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h5{
+  color: #555;
+  font-weight: 700;
+}
+.btn{
   background-color: #B7071B;
+  color: white;
+}
+.mr1{
+  color: rgb(181, 181, 181);
+  border-radius: 50%;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  cursor: crosshair !important;
+}
+.mr1:hover{
+  background-color: rgba(0,0 , 0, 0.06);
 }

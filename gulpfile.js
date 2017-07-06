@@ -21,7 +21,7 @@ var paths = {
 	vendor:"js/vendor/*",
 	components:"js/components/*",
 	mainJS: "js/app.js",
-	img: "img/*.png",
+	img: "img/*.*",
 	bootstrapJS: "js/vendor/bootstrap/*"
 };
 
