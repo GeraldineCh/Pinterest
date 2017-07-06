@@ -10,6 +10,8 @@ const render = (root) => {
     }
     
     wrapper.append(Header());
+    wrapper.append(Down());
+    wrapper.append(titlePage());
 	root.append(wrapper);
 }
 
