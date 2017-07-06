@@ -2,12 +2,12 @@
 
 const Header = (update) => {
     const header = $('<header></header>');
-    const title = $('<form class="form-inline"></form>');
+    const title = $('<form class="form-inline center"></form>');
     const title2 = $('<div class="container-fluid"></div>');
     const title3 = $('<div class="form-inline"></div>');
     const title4 = $('<div class="form-group"></div>');
  const logo = $('<img src="assets/img/pinterest-logo.png" href="#" class="img-header" alt="">');
- const search = $('<input type="text" class="form-control searcher col-md-4" placeholder="Buscar">');
+ const search = $('<input type="text" class="form-control searcher visible-md" placeholder="Buscar">');
  const user = $('<img src="assets/img/icon-profile.png" class="img-header" alt="">');
  const menu = $('<img src="assets/img/menu.png" class="hmenu" alt="">');
  const message = $('<img src="assets/img/message.png" class="img-header" alt="">');
