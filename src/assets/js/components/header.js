@@ -6,11 +6,11 @@ const Header = (update) => {
     const title2 = $('<div class="container-fluid"></div>');
     const title3 = $('<div class="container-fluid"></div>');
     const title4 = $('<div class="navbar-header"></div>');
- const title5 = $('<a class="navbar-brand" href="www.pinterest.com"></a>');
- const logo = $('<img alt="Brand" class="logo" src="assets/img/pinterest-logo.png">');
+ const search = $('<input type="text" class="form-control searcher" placeholder="Search">');
+ const logo = $('<img src="assets/img/pinterest-logo.png" class="logo" alt="">')
     
- title5.append(logo);
- title4.append(title5);
+ title4.append(logo);
+ title4.append(search);
  title3.append(title4);
  title2.append(title3);
  title.append(title2);
