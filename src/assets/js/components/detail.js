@@ -1,6 +1,8 @@
 'use strict';
 
 const detailModal = (detail,update) => {
+  console.log(detail);
+  console.log("modal");
   const modal= $('<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>');
   const modaldialog= $('<div class="modal-dialog" role="document"></div>');
   const modalcontent= $('<div class="modal-content"></div>');
@@ -15,13 +17,13 @@ const detailModal = (detail,update) => {
                         '</div>');
   const bodyModal =$('<div class="modal-body"></div>');
   const titulo    =$('<div class="titulo"></div>');
-  const ImgModal  =$('<div><img src="'+detail.data[10].image.original.url +'" class="img-responsive" alt="Imagen modal"></div>');
+  const ImgModal  =$('<div><img src="'+detail.image.original.url +'" class="img-responsive" alt="Imagen modal"></div>');
   const coment    =$('<div class="coment"></div>');
   const coment1   =$('<div class="flex items-center justify-between coment_1"></div>');
   const coment3   =$('<div class="coment_1">'+
                           '<a><div class="flex items-center">'+
                                  '<div class="mr1"><img src="assets/img/arabelyuska.jpg" class="img-responsive mr1" alt="Arabela"></div>'+
-                                 '<div> Arabela  lo ha guardado en '+detail.data[10].board.name+'<br>'+detail.data[10].note +'</div></div></a>'+
+                                 '<div> Arabela  lo ha guardado en '+detail.board.name+'<br>'+detail.note +'</div></div></a>'+
                         '</div>');
   const coment4   =$('<div>Comentarios</div>');
 
@@ -38,19 +40,17 @@ const detailModal = (detail,update) => {
     modaldialog.append(modalcontent);
     modal.append(modaldialog);
 
-      if (detail.data[2].metadata.article!= undefined){
-         const title =$('<h5>'+ detail.data[2].metadata.article.name +'</h5>');
+      if (detail.metadata.article!= undefined){
+         const title =$('<h5>'+ detail.metadata.article.name +'</h5>');
          const anexo    =$('<a><div class="flex  items-center"><div class="mr1 flex_center">'+
-                                           '<img src="'+ detail.data[10].metadata.link.favicon +'" class="img-responsive mr1" alt="Arabela"></div>'+
-                                      '<div><p>Articulo de<br>'+ detail.data[10].metadata.link.site_name +'</p></div>'+
+                                           '<img src="'+ detail.metadata.link.favicon +'" class="img-responsive mr1" alt="Arabela"></div>'+
+                                      '<div><p>Articulo de<br>'+ detail.metadata.link.site_name +'</p></div>'+
                                    '</div></a>'+
                                    '<div><button type="button" class="btn btn-default">Visitar</button></div>');
-         const coment2   =$('<div class="coment_1">'+ detail.data[10].metadata.article.description +'</div>');
+         const coment2   =$('<div class="coment_1">'+ detail.metadata.article.description +'</div>');
          titulo.append(title);
          coment1.append(anexo);
          coment.append(coment2);
-      }else {
-        console.log("no hace appende");
       }
 
     return modal;
