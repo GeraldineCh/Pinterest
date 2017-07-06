@@ -4,7 +4,7 @@ const Grid = (update ) => {
 	const mainContainer = $('<section class="container"></section>');
 	const container = $('<div class="grid"></div>');
 	state.board.forEach((element) => {
-		const pin = $('<div class="item pin" data-toggle="modal" data-target="#myModal"></div>');
+		const pin = $('<div class="item pin"></div>');
 		const modu =$('<a class="pin__upload" href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>'+
 							'<a class="pin__pinear" href="#"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>Guardar</a>'+
 							'<div class="pin__img">' +

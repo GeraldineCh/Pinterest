@@ -12,7 +12,7 @@ const render = (root) => {
 
 		if (state.image != null) {
 			console.log("imprime modal");
-      wrapper.append(detailModal(state.image));
+      wrapper.append(detailModal(state.image,update));
      }
 
 	root.append(wrapper);
