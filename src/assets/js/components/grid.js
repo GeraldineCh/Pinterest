@@ -1,9 +1,9 @@
 'use strict';
 
-const Grid = (detail ,update ) => {
+const Grid = (update ) => {
 	const mainContainer = $('<section class="container"></section>');
 	const container = $('<div class="grid"></div>');
-	detail.forEach((element) => {
+	state.board.forEach((element) => {
 		const pin = $('<div class="item pin" data-toggle="modal" data-target="#myModal"></div>');
 		const modu =$('<a class="pin__upload" href="#"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>'+
 							'<a class="pin__pinear" href="#"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>Guardar</a>'+
@@ -22,7 +22,7 @@ const Grid = (detail ,update ) => {
 		container.append(pin);
 
 		if(element.metadata.article != undefined){
-			const articleTitle = $(`<div class="pin__title"><h2>${element.metadata.article.name}</h2></div>`);
+			const articleTitle = $(`<div class="pin__title"><h6>${element.metadata.article.name}</h6></div>`);
 			const articleSub = $(`<div class="pin__subtitle">${element.metadata.article.description}</div>`);
 			pin.append(articleTitle);
 			pin.append(articleSub);

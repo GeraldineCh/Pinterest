@@ -6,7 +6,7 @@ const render = (root) => {
     wrapper.append(Header());
     wrapper.append(Down());
     wrapper.append(titlePage());
-		wrapper.append(Grid(state.board ,update));
+		wrapper.append(Grid(update));
 
 
 		if (state.image != null) {
