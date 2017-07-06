@@ -2,7 +2,7 @@
 
 const Header = (update) => {
     const header = $('<header></header>');
-    const title = $('<form class="form-inline center"></form>');
+    const title = $('<form class="form-inline center navbar-fixed-top"></form>');
     const title2 = $('<div class="container-fluid"></div>');
     const title3 = $('<div class="form-inline"></div>');
     const title4 = $('<div class="form-group"></div>');
