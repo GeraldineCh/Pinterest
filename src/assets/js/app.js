@@ -1,23 +1,23 @@
 'use strict';
-
-function render(root) {
+const render = (root)=>{
 	root.empty();
-	console.log("Entro al RendeASDASDSAD");
 	const wrapper = $('<div class="wrapper"></div>');
-  wrapper.append(detailModal( _ => { render(root); }));
-	root.append(wrapper);
-}
 
-var state = {
-	board: null,
-	image: null
+	//Añadiendo componentes:
+
+	// wrapper.append(Header());
+    // wrapper.append(detailModal( _ => { render(root); }));
+	wrapper.append(Grid());
+
+	root.append(wrapper);
 };
 
-$(function() {
-	$.getJSON("https://api.pinterest.com/v1/boards/arabelyuska/web-ui/pins/?access_token=AYW4sy910pu7ohi4cnh-uVMtuu1KFM4wh-qaii5EIvFbYaA__gAAAAA&fields=id%2Clink%2Curl%2Cmedia%2Cattribution%2Cboard%2Cmetadata%2Ccolor%2Cnote%2Ccounts%2Coriginal_link%2Ccreated_at%2Ccreator%2Cimage", function (data) {
-		console.log(data);
-		state.board = data;
 
+$( _ => {
+	$.getJSON("https://api.pinterest.com/v1/boards/arabelyuska/web-ui/pins/?access_token=AYW4sy910pu7ohi4cnh-uVMtuu1KFM4wh-qaii5EIvFbYaA__gAAAAA&fields=id%2Clink%2Cnote%2Cboard%2Cimage%2Cmetadata%2Coriginal_link%2Ccreator", function (result){
+		state.board = result.data;
+
+		console.log(result.data);
 		const root = $('.root');
 		render(root);
 	});

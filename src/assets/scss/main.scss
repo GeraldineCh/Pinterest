@@ -6,3 +6,40 @@
 .btn_save{
   background-color: #B7071B;
 }
+.grid { /* Masonry container */
+  column-count: 5;
+  column-gap: 1em;
+}
+.item { /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+.pin{
+  position: relative;
+  h3{
+    font-size:14px;
+    margin:0;
+
+  }
+  .pin__autor{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 7px;
+  }
+  .pin__autor-arabela{
+    margin-right: 4px;
+  }
+  .pin__upload,
+  .pin__pinear {
+    display: none;
+    position: absolute;
+    top: 18.5px;
+    padding: 8px;
+    border-radius: 5px;
+  }
+}
+
+
