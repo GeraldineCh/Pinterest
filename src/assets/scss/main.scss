@@ -1,14 +1,21 @@
 //Csss Gerald
-
 @import "bootstrap" ;
+
 /*Header*/
+
+.form-inline .form-group {
+ display: flex;
+ align-items: center;
+ margin: 5px;
+}
+
 .navbar-fixed-top {
  background-color: white;
 }
 
 .img-header {
-  height: 20px;
-  width: 20px;
+  height: 26px;
+  width: 26px;
   margin: 0.5rem;
 }
 
@@ -84,11 +91,7 @@
 .title .title__pines{
     margin-bottom: 0;
 }
-@media (max-width: 600px){
-    .title{
-        max-width: 300px;
-    }
-}
+
 .title__userprinc{
     border-radius: 50%;
     height: 60px;
