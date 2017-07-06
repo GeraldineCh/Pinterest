@@ -14,7 +14,7 @@ const detailModal = (detail,update) => {
                                 '<button type="button" class="btn btn-default"><span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>Guardar</button></div>'+
                         '</div>');
   const bodyModal =$('<div class="modal-body"></div>');
-  const titulo    =$('<div class="title"></div>');
+  const titulo    =$('<div class="titulo"></div>');
   const ImgModal  =$('<div><img src="'+detail.data[10].image.original.url +'" class="img-responsive" alt="Imagen modal"></div>');
   const coment    =$('<div class="coment"></div>');
   const coment1   =$('<div class="flex items-center justify-between coment_1"></div>');
