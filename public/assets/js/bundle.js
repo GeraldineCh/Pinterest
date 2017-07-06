@@ -3,16 +3,16 @@
 
 const render = (root) => {
 	root.empty();
-	console.log("Entro al render");
 	const wrapper = $('<div class="wrapper"></div>');
- 
-    const update = function () {
-     render(root);
-    }
-    
+  const button   =$('<button type="button"  name="button" data-toggle="modal" data-target="#myModal">Modal</button>');
     wrapper.append(Header());
     wrapper.append(Down());
     wrapper.append(titlePage());
+	  wrapper.append(button);
+		button.on( "click", function() {
+				 wrapper.append(detailModal(state.board ,update));
+		 });
+
 	root.append(wrapper);
 }
 
@@ -21,13 +21,16 @@ const state = {
 	image: null
 };
 
-$(_ => {
- getJSON('https://api.pinterest.com/v1/boards/arabelyuska/web-ui/pins/?access_token=AYW4sy910pu7ohi4cnh-uVMtuu1KFM4wh-qaii5EIvFbYaA__gAAAAA&fields=id%2Clink%2Curl%2Cmedia%2Cattribution%2Cboard%2Cmetadata%2Ccolor%2Cnote%2Ccounts%2Coriginal_link%2Ccreated_at%2Ccreator%2Cimage', (err,data) => {
-  if(err){return alert(err.message);}
-  state.board = data.data
-  
-  const root = $('#root')
-  render(root)
- });
+const update = function (){
+  render(root);
+};
+
+$(function() {
+	$.getJSON("https://api.pinterest.com/v1/boards/arabelyuska/web-ui/pins/?access_token=AYW4sy910pu7ohi4cnh-uVMtuu1KFM4wh-qaii5EIvFbYaA__gAAAAA&fields=id%2Clink%2Curl%2Cmedia%2Cattribution%2Cboard%2Cmetadata%2Ccolor%2Cnote%2Ccounts%2Coriginal_link%2Ccreated_at%2Ccreator%2Cimage", function (data) {
+		state.board = data;
+		const root = $('.root');
+		render(root);
+	});
 });
+
 },{}]},{},[1])
